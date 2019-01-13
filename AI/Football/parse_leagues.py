@@ -166,9 +166,10 @@ def correct_format_and_write(to_write):
 		del i["Date"]
 		del i["Team"]
 
-		i["GfA"] = float(i["GfA"])
-		i["GaA"] = float(i["GaA"])
-		i["Elo"] = float(i["Elo"])
+		i["GfA"] = round(float(i["GfA"]), 2)
+		i["GaA"] = round(float(i["GaA"]), 2)
+		i["Elo"] = round(float(i["Elo"]), 2)
+		i["Pts_div_pld"] = round(float(i["Pts_div_pld"]), 2)
 
 
 	keys = to_write[0].keys()
